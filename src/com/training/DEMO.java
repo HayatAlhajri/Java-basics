@@ -57,5 +57,26 @@ public class DEMO {
     }
 }
 
+// next()--> will take simple string without space
+//next()-->to input intger value
+// import shortcut : ctrl+shift+o
+// java is a strongly typed language 
+// variable is a place holder pointing to memory location 
+// 
+
+//create variables that will store customer first name and
+//customer last name , customer age
+// and display all the customer details in a single line
+
+// /////////////////////////////////////////////////////
+
+
+// take the customer details from user using scanner class
+//check if the customer is more than 18 then display
+//eligible to open an account
+// else display :not yet eligible to open an acc.
+
+
+
 
 
