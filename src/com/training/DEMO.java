@@ -2,7 +2,7 @@ package com.training;
 
 import java.util.Scanner;
 
-public class Customer2 {
+public class DEMO {
 
     public static void main(String[] args) {
 
@@ -10,27 +10,43 @@ public class Customer2 {
 
         int i = 0;
 
-        while (i < 3) {
+        while (true) {
+
+            System.out.println("Enter X to exit or any key to continue:");
+            String choice = sc.next();
+
+            if (choice.equalsIgnoreCase("X"))
+                break;
+
+            sc.nextLine(); // clear buffer
 
             i++;
 
-            System.out.println("Enter first customer name :" + i );
-            String firstName = sc.nextLine();
+            System.out.println("Enter first customer name :" + i);
+            sc.nextLine();
 
-            System.out.println("Enter last customer name: " + i );
-            String lastName = sc.nextLine();
+            System.out.println("Enter last customer name :" + i);
+            sc.nextLine();
 
-            System.out.println("Enter age :" + i );
+            System.out.println("Enter age :" + i);
+
             int age = sc.nextInt();
-            sc.nextLine(); // clears the Enter key
-
-            System.out.println("Customer Saved:");
-            System.out.println(firstName + " " + lastName + " - Age: " + age);
-
-         
+            sc.nextLine(); // clears buffer
         }
 
         System.out.println("Total number of customers saved: " + i);
+
+        for (int j = 0; j < 3; j++) {
+            System.out.println("Number of iteration " + (j + 1));
+        }
+
+        int k = 0;
+        do {
+
+            System.out.println("inside do while loop");
+            k++;
+
+        } while (k < 3);
 
         byte b = 112;
         short s = 115;
@@ -40,3 +56,6 @@ public class Customer2 {
         sc.close();
     }
 }
+
+
+
