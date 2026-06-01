@@ -6,17 +6,19 @@ public class Customer {
     private String customerName;
     private String gender;
     private String city;
+    private double balance;   // ✅ ADD THIS
 
     // Default Constructor
     public Customer() {
     }
 
     // Parameterized Constructor
-    public Customer(String customerId, String customerName, String gender, String city) {
+    public Customer(String customerId, String customerName, String gender, String city, double balance) {
         this.customerId = customerId;
         this.customerName = customerName;
         this.gender = gender;
         this.city = city;
+        this.balance = balance;
     }
 
     // Getters
@@ -36,6 +38,10 @@ public class Customer {
         return city;
     }
 
+    public double getBalance() {
+        return balance;
+    }
+
     // Setters
     public void setCustomerId(String customerId) {
         this.customerId = customerId;
@@ -52,13 +58,14 @@ public class Customer {
     public void setCity(String city) {
         this.city = city;
     }
-   
-    // toString Method
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    // toString Method (good for file writing)
     @Override
     public String toString() {
-        return "Customer [customerId=" + customerId
-                + ", customerName=" + customerName
-                + ", gender=" + gender
-                + ", city=" + city + "]";
+        return customerId + "," + customerName + "," + gender + "," + city + "," + balance;
     }
 }
