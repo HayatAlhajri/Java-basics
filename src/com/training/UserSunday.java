@@ -14,7 +14,7 @@ public class UserSunday {
 
         // input names
         System.out.println("Enter 3 names:");
-
+ 
         names.add(sc.nextLine());
         names.add(sc.nextLine());
         names.add(sc.nextLine());

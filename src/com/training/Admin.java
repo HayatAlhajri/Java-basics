@@ -9,8 +9,6 @@ public class Admin extends User{
 		this.isSuperAdmin=isSuperAdmin;
 	}
 
-
-
 	public boolean isSuperAdmin() {
 		return isSuperAdmin;
 	}

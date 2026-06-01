@@ -52,7 +52,7 @@ public class Customer {
     public void setCity(String city) {
         this.city = city;
     }
-
+   
     // toString Method
     @Override
     public String toString() {

@@ -17,7 +17,7 @@ public class CustomerCSVReader {
 
             BufferedWriter bw = new BufferedWriter(
                 new FileWriter("male_customer.csv"))
-        ) {
+          ) {
 
             // Write header in output file
             bw.write("customer_id,customer_name,gender,city");
