@@ -8,7 +8,17 @@ public class CurrentAccount extends Account {
                           double balance, double overdraftLimit) {
 
         super(accountNumber, customerName, balance);
-
         this.overdraftLimit = overdraftLimit;
+    }
+
+    @Override
+    public void withdraw(double amount) throws InsufficientBalanceException {
+
+        if (balance + overdraftLimit >= amount) {
+            balance -= amount;
+            System.out.println("Withdraw successful from current account");
+        } else {
+            throw new InsufficientBalanceException("Exceeds overdraft limit");
+        }
     }
 }

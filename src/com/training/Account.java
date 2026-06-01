@@ -1,31 +1,30 @@
 package com.training;
 
-public class Account {
+public abstract class Account {
 
-    protected int accountNumber; // number so integer
+    protected int accountNumber;
     protected String customerName;
-   protected  double balance; // because this is will be decimal
+    protected double balance;
 
-    // constructor
     public Account(int accountNumber, String customerName, double balance) {
         this.accountNumber = accountNumber;
         this.customerName = customerName;
         this.balance = balance;
     }
 
-    // deposit
-   public void deposit(double amount) {
-        balance = balance + amount;
+    public void deposit(double amount) {
+        balance += amount;
+        System.out.println(amount + " deposited successfully");
     }
 
-    // withdraw
-   public void withdraw(double amount) {
-        balance = balance - amount;  
-   
-    }
+    public abstract void withdraw(double amount) throws InsufficientBalanceException;
 
-    // display balance
-   public void displayBalance() {
-        System.out.println("Balance: " + balance);
+    public double displayBalance() {
+        return balance;
     }
 }
+
+//Abstract method: No implementation
+//Concrete method: having implementation
+
+//Interface: 100% abstract - explore interface
